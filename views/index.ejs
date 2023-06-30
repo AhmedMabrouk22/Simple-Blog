@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <%- include("./partials/header.ejs") %>
+        <div class="blogs-content">
+            <h2>All Blogs</h2>
+
+            <% blog.forEach(elm => { %>
+                <div class="blog">
+                    <h3 class="blog-name"><a href="/blogs/<%=elm.id%>"><%=elm.title%></a></h3>
+                    <p class="blog-snippet"><%=elm.snippet%></p>
+                </div>
+            <%}); %>
+
+
+
+        </div>
+    </body>
+</html>
